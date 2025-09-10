@@ -1,0 +1,65 @@
+[
+  {
+    "nome": "Juninho Martins",
+    "email": "juninho.martins@senai.com",
+    "equipe": "Gerente de Projeto",
+    "username": "Juninho",
+    "senha": "1234"
+  },
+  {
+    "nome": "Carla Santos",
+    "email": "carla.santos@example.com",
+    "equipe": "Desenvolvimento",
+    "username": "carla",
+    "senha": "superseguro123"
+  },
+  {
+    "nome": "Daniel Costa",
+    "email": "daniel.costa@example.com",
+    "equipe": "Design",
+    "username": "danielcosta",
+    "senha": "password!@#123"
+  },
+  {
+    "nome": "Érica Pereira",
+    "email": "erica.pereira@example.com",
+    "equipe": "Desenvolvimento",
+    "username": "ericap",
+    "senha": "mysecurepass"
+  },
+  {
+    "nome": "Fábio Almeida",
+    "email": "fabio.almeida@example.com",
+    "equipe": "Gerente de Projeto",
+    "username": "fabio",
+    "senha": "strongpassword123"
+  },
+  {
+    "nome": "Gabriela Silva",
+    "email": "gabriela.silva@example.com",
+    "equipe": "Design",
+    "username": "gabisilva",
+    "senha": "password12345"
+  },
+  {
+    "nome": "Henrique Souza",
+    "email": "henrique.souza@example.com",
+    "equipe": "Design",
+    "username": "henriquesouza",
+    "senha": "securepassword"
+  },
+  {
+    "nome": "Ana Silva",
+    "email": "ana.silva@example.com",
+    "equipe": "Desenvolvimento",
+    "username": "anasilva",
+    "senha": "password123"
+  },
+  {
+    "nome": "Bruno Oliveira",
+    "email": "bruno.oliveira@example.com",
+    "equipe": "Design",
+    "username": "bruno10",
+    "senha": "strong_password"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Desenvolver o módulo de login",
+    "descricao": "Implementar a autenticação com email e senha.",
+    "prazo": "2024-12-31",
+	"equipe": "desenvimento",
+	"prioridade": "alta",
+    "status": "pendente",
+    "project_id": 1
+  },
+  {
+    "titulo": "Criar o layout da página inicial",
+    "descricao": "Desenvolver o design responsivo da página principal.",
+    "prazo": "2024-11-15",
+	"equipe": "design",
+	"prioridade": "media",
+    "status": "em andamento",
+    "project_id": 2
+  }
+]
