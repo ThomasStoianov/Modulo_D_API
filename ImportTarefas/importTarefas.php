@@ -16,7 +16,7 @@ $conn->set_charset("utf8");
 $json = file_get_contents('Incluir-Tarefas.json');
 $tarefas = json_decode($json, true);
 
-$stmt = $conn->prepare("INSERT INTO tarefas  (titulo, descricao, prazo, equipe, prioridade, status, project_id, responsavel) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO tarefas (titulo, descricao, prazo, equipe, prioridade, status, projeto, responsavel) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
 foreach ($tarefas as $tarefa) {
     $stmt->bind_param(

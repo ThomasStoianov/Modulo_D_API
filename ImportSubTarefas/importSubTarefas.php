@@ -23,18 +23,18 @@ if ($subTarefas === null) {
     die("Erro ao decodificar JSON: " . json_last_error_msg());
 }
 
-$stmt = $conn->prepare("INSERT INTO subTarefas (tarefa_id, titulo, descricao, prazo, equipe, prioridade, status, project_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO subTarefas (titulo, descricao, prazo, equipe, prioridade, status, project_id, id_tarefa) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 foreach ($subTarefas as $subTarefa) {
     $stmt->bind_param(
-        'issssssi',
-        $subTarefa['ID_tarefa'],   // aqui é o campo do JSON
+        'sssssssi',
         $subTarefa['titulo'],
         $subTarefa['descricao'],
         $subTarefa['prazo'],
         $subTarefa['equipe'],
         $subTarefa['prioridade'],
         $subTarefa['status'],
-        $subTarefa['project_id']
+        $subTarefa['project_id'],
+        $subTarefa['ID_tarefa']
     );
     $stmt->execute();
 }

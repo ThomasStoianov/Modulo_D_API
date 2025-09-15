@@ -74,6 +74,10 @@ $token = [
 // Codifica o array $token em uma string JWT segura, usando a chave secreta e o algoritmo HS256
 $jwt = JWT::encode($token, $secret_key, 'HS256');
 
+$update = $conn->prepare("UPDATE usuarios SET token = ? WHERE id = ?");
+$update->bind_param("si", $jwt, $user['id']);
+$update->execute();
+
 // Retorna token
 echo json_encode(["token" => $jwt]);
 

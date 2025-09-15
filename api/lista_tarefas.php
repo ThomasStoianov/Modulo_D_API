@@ -1,5 +1,10 @@
 <?php
 
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
+require "../vendor/autoload.php";
+
 global $conn;
 require '../conexao.php';
 
@@ -19,20 +24,16 @@ if ($bearer !== "Bearer" || empty($token)) {
     exit;
 }
 
-// Limpa o token no banco de dados
-$sql = "UPDATE usuarios SET token = NULL WHERE token = ?";
+
+$sql = "SELECT * FROM tarefas";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $token);
 $stmt->execute();
 
-if($stmt->affected_rows > 0){
-    echo json_encode(["Message" => "Logout realizado com sucesso"]);
-} else {
-    http_response_code(401);
-    echo json_encode(["Message" => "Token inválido ou já expirado"]);
-}
+$result = $stmt->get_result();
 
-$stmt->close();
-$conn->close();
+$dados = $result->fetch_all(MYSQLI_ASSOC);
+
+echo json_encode($dados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
 
 ?>
